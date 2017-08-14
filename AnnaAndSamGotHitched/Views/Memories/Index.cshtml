@@ -1,6 +1,17 @@
-
+@model MemoryListingViewModel
 @{
     ViewData["Title"] = "Index";
 }
 
 <h2>Mr &amp; Mrs Townsend 2<sup>nd</sup> September 2017</h2>
+
+@Html.ActionLink("Add a memory", "Index", "Home",null, new { @class = "btn" })
+<div class="row">
+    @foreach (MemoryViewModel memory in Model.Memories)
+    {
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div>Image</div>
+            <div>@memory.Note</div>
+        </div>
+    }
+</div>
