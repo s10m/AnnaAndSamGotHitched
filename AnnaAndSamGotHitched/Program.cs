@@ -18,7 +18,7 @@ namespace AnnaAndSamGotHitched
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
-
+             
             host.Run();
         }
     }
